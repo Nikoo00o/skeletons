@@ -65,14 +65,10 @@ class SkeletonAvatarStyle {
     this.maxHeight,
     this.shape = BoxShape.rectangle,
     this.borderRadius = const BorderRadius.all(Radius.circular(4)),
-  })  : assert(minWidth == null ||
-            (minWidth > 0 && (maxWidth == null || maxWidth > minWidth))),
-        assert(maxWidth == null ||
-            (maxWidth > 0 && (minWidth == null || minWidth < maxWidth))),
-        assert(minHeight == null ||
-            (minHeight > 0 && (maxHeight == null || maxHeight > minHeight))),
-        assert(maxHeight == null ||
-            (maxHeight > 0 && (minHeight == null || minHeight < maxHeight)));
+  })  : assert(minWidth == null || (minWidth > 0 && (maxWidth == null || maxWidth > minWidth))),
+        assert(maxWidth == null || (maxWidth > 0 && (minWidth == null || minWidth < maxWidth))),
+        assert(minHeight == null || (minHeight > 0 && (maxHeight == null || maxHeight > minHeight))),
+        assert(maxHeight == null || (maxHeight > 0 && (minHeight == null || minHeight < maxHeight)));
 }
 
 class SkeletonLineStyle {
@@ -94,10 +90,8 @@ class SkeletonLineStyle {
       this.maxLength,
       this.borderRadius = const BorderRadius.all(Radius.circular(2)),
       this.alignment = AlignmentDirectional.centerStart})
-      : assert(minLength == null ||
-            (minLength > 0 && (maxLength == null || maxLength > minLength))),
-        assert(maxLength == null ||
-            (maxLength > 0 && (minLength == null || minLength < maxLength)));
+      : assert(minLength == null || (minLength > 0 && (maxLength == null || maxLength > minLength))),
+        assert(maxLength == null || (maxLength > 0 && (minLength == null || minLength < maxLength)));
 }
 
 class SkeletonParagraphStyle {

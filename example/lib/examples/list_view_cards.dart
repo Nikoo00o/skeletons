@@ -3,8 +3,7 @@ import 'package:skeletons/skeletons.dart';
 
 class ListviewCardsExamplePage extends StatefulWidget {
   @override
-  _ListviewCardsExamplePageState createState() =>
-      _ListviewCardsExamplePageState();
+  _ListviewCardsExamplePageState createState() => _ListviewCardsExamplePageState();
 }
 
 class _ListviewCardsExamplePageState extends State<ListviewCardsExamplePage> {
@@ -107,21 +106,15 @@ class _ListviewCardsExamplePageState extends State<ListviewCardsExamplePage> {
                   children: [
                     Row(
                       children: [
-                        SkeletonAvatar(
-                            style: SkeletonAvatarStyle(width: 20, height: 20)),
+                        SkeletonAvatar(style: SkeletonAvatarStyle(width: 20, height: 20)),
                         SizedBox(width: 8),
-                        SkeletonAvatar(
-                            style: SkeletonAvatarStyle(width: 20, height: 20)),
+                        SkeletonAvatar(style: SkeletonAvatarStyle(width: 20, height: 20)),
                         SizedBox(width: 8),
-                        SkeletonAvatar(
-                            style: SkeletonAvatarStyle(width: 20, height: 20)),
+                        SkeletonAvatar(style: SkeletonAvatarStyle(width: 20, height: 20)),
                       ],
                     ),
                     SkeletonLine(
-                      style: SkeletonLineStyle(
-                          height: 16,
-                          width: 64,
-                          borderRadius: BorderRadius.circular(8)),
+                      style: SkeletonLineStyle(height: 16, width: 64, borderRadius: BorderRadius.circular(8)),
                     )
                   ],
                 )
@@ -138,8 +131,7 @@ class _ListviewCardsExamplePageState extends State<ListviewCardsExamplePage> {
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: Container(
             color: Colors.white,
-            height: doubleInRange(MediaQuery.of(context).size.height / 8,
-                MediaQuery.of(context).size.height / 2),
+            height: doubleInRange(MediaQuery.of(context).size.height / 8, MediaQuery.of(context).size.height / 2),
             child: Center(
               child: Text(
                 "CONTENT",

@@ -59,10 +59,7 @@ class ItemsExamplePage extends StatelessWidget {
         ),
         SkeletonLine(
           style: SkeletonLineStyle(
-              padding: EdgeInsets.all(16.0),
-              borderRadius: BorderRadius.circular(8),
-              height: 28,
-              randomLength: true),
+              padding: EdgeInsets.all(16.0), borderRadius: BorderRadius.circular(8), height: 28, randomLength: true),
         ),
       ],
     );
@@ -87,15 +84,11 @@ class ItemsExamplePage extends StatelessWidget {
             SkeletonAvatar(),
             VerticalDivider(),
             SkeletonAvatar(
-              style: SkeletonAvatarStyle(
-                  borderRadius: BorderRadius.circular(8),
-                  height: 62,
-                  width: 62),
+              style: SkeletonAvatarStyle(borderRadius: BorderRadius.circular(8), height: 62, width: 62),
             ),
             VerticalDivider(),
             SkeletonAvatar(
-              style: SkeletonAvatarStyle(
-                  shape: BoxShape.circle, height: 72, width: 72),
+              style: SkeletonAvatarStyle(shape: BoxShape.circle, height: 72, width: 72),
             ),
             VerticalDivider(),
             SkeletonAvatar(
@@ -129,21 +122,15 @@ class ItemsExamplePage extends StatelessWidget {
         SkeletonListTile(
           hasSubtitle: true,
           padding: EdgeInsets.symmetric(horizontal: 16),
-          leadingStyle: SkeletonAvatarStyle(
-              shape: BoxShape.circle, width: 64, height: 64),
-          titleStyle:
-              SkeletonLineStyle(borderRadius: BorderRadius.circular(16)),
-          subtitleStyle: SkeletonLineStyle(
-              borderRadius: BorderRadius.circular(16),
-              randomLength: true,
-              maxLength: 128),
+          leadingStyle: SkeletonAvatarStyle(shape: BoxShape.circle, width: 64, height: 64),
+          titleStyle: SkeletonLineStyle(borderRadius: BorderRadius.circular(16)),
+          subtitleStyle: SkeletonLineStyle(borderRadius: BorderRadius.circular(16), randomLength: true, maxLength: 128),
           verticalSpacing: 16,
         ),
         SkeletonListTile(
           hasSubtitle: true,
           padding: EdgeInsets.all(16),
-          leadingStyle: SkeletonAvatarStyle(
-              shape: BoxShape.circle, width: 72, height: 72),
+          leadingStyle: SkeletonAvatarStyle(shape: BoxShape.circle, width: 72, height: 72),
           titleStyle: SkeletonLineStyle(height: 18),
           subtitleStyle: SkeletonLineStyle(
             height: 12,
@@ -181,10 +168,7 @@ class ItemsExamplePage extends StatelessWidget {
         SkeletonParagraph(
           style: SkeletonParagraphStyle(
               spacing: 6,
-              lineStyle: SkeletonLineStyle(
-                  height: 16,
-                  randomLength: true,
-                  borderRadius: BorderRadius.circular(16))),
+              lineStyle: SkeletonLineStyle(height: 16, randomLength: true, borderRadius: BorderRadius.circular(16))),
         ),
         Divider(),
         SkeletonParagraph(

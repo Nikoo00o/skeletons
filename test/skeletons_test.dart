@@ -5,8 +5,7 @@ import 'package:skeletons/skeletons.dart';
 import 'widgets/skeleton_test_widget.dart';
 
 void main() {
-  testWidgets('test loading (active) skeleton widget',
-      (WidgetTester tester) async {
+  testWidgets('test loading (active) skeleton widget', (WidgetTester tester) async {
     await tester.pumpWidget(SkeletonTestWidget(
       isLoading: true,
       skeleton: SkeletonListTile(),
@@ -34,8 +33,7 @@ void main() {
         findsNothing);
   });
 
-  testWidgets('test loaded (inactive) skeleton widget',
-      (WidgetTester tester) async {
+  testWidgets('test loaded (inactive) skeleton widget', (WidgetTester tester) async {
     await tester.pumpWidget(SkeletonTestWidget(
       isLoading: false,
       skeleton: SkeletonListTile(),
@@ -64,7 +62,7 @@ void main() {
   });
 
   testWidgets('test skeleton listview widget', (WidgetTester tester) async {
-    tester.binding.window.physicalSizeTestValue = Size(1080, 2160);
+    tester.view.physicalSize = Size(1080, 2160);
     await tester.pumpWidget(SkeletonTestWidget(
       isLoading: true,
       skeleton: SkeletonListView(
@@ -96,8 +94,7 @@ void main() {
         findsWidgets);
 
     // try to scroll down (wont)
-    final gesture1 =
-        await tester.startGesture(Offset(0, 300)); //Position of the scrollview
+    final gesture1 = await tester.startGesture(Offset(0, 300)); //Position of the scrollview
     await gesture1.moveBy(Offset(0, -300)); //How much to scroll by
     await tester.pump();
 
@@ -120,8 +117,7 @@ void main() {
     ));
 
     // try to scroll down
-    final gesture2 =
-        await tester.startGesture(Offset(0, 300)); //Position of the scrollview
+    final gesture2 = await tester.startGesture(Offset(0, 300)); //Position of the scrollview
     await gesture2.moveBy(Offset(0, -300)); //How much to scroll by
     await tester.pump();
 

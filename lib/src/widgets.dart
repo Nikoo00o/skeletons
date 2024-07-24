@@ -7,7 +7,9 @@ part 'skeleton.dart';
 
 class SkeletonItem extends StatelessWidget {
   final Widget child;
+
   const SkeletonItem({Key? key, required this.child});
+
   @override
   Widget build(BuildContext context) {
     if (Shimmer.of(context) == null) {
@@ -25,8 +27,8 @@ class SkeletonItem extends StatelessWidget {
 
 class SkeletonAvatar extends StatelessWidget {
   final SkeletonAvatarStyle style;
-  const SkeletonAvatar({Key? key, this.style = const SkeletonAvatarStyle()})
-      : super(key: key);
+
+  const SkeletonAvatar({Key? key, this.style = const SkeletonAvatarStyle()}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,26 +39,19 @@ class SkeletonAvatar extends StatelessWidget {
           builder: (context, constraints) {
             return Container(
               width: ((style.randomWidth != null && style.randomWidth!) ||
-                      (style.randomWidth == null &&
-                          (style.minWidth != null && style.maxWidth != null)))
-                  ? doubleInRange(
-                      style.minWidth ??
-                          ((style.maxWidth ?? constraints.maxWidth) / 3),
+                      (style.randomWidth == null && (style.minWidth != null && style.maxWidth != null)))
+                  ? doubleInRange(style.minWidth ?? ((style.maxWidth ?? constraints.maxWidth) / 3),
                       style.maxWidth ?? constraints.maxWidth)
                   : style.width,
               height: ((style.randomHeight != null && style.randomHeight!) ||
-                      (style.randomHeight == null &&
-                          (style.minHeight != null && style.maxHeight != null)))
-                  ? doubleInRange(
-                      style.minHeight ??
-                          ((style.maxHeight ?? constraints.maxHeight) / 3),
+                      (style.randomHeight == null && (style.minHeight != null && style.maxHeight != null)))
+                  ? doubleInRange(style.minHeight ?? ((style.maxHeight ?? constraints.maxHeight) / 3),
                       style.maxHeight ?? constraints.maxHeight)
                   : style.height,
               decoration: BoxDecoration(
-                color: Theme.of(context).backgroundColor,
+                color: Theme.of(context).scaffoldBackgroundColor,
                 shape: style.shape,
-                borderRadius:
-                    style.shape != BoxShape.circle ? style.borderRadius : null,
+                borderRadius: style.shape != BoxShape.circle ? style.borderRadius : null,
               ),
             );
           },
@@ -68,8 +63,8 @@ class SkeletonAvatar extends StatelessWidget {
 
 class SkeletonLine extends StatelessWidget {
   final SkeletonLineStyle style;
-  const SkeletonLine({Key? key, this.style = const SkeletonLineStyle()})
-      : super(key: key);
+
+  const SkeletonLine({Key? key, this.style = const SkeletonLineStyle()}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -87,17 +82,13 @@ class SkeletonLine extends StatelessWidget {
               builder: (context, constraints) {
                 return Container(
                   width: ((style.randomLength != null && style.randomLength!) ||
-                          (style.randomLength == null &&
-                              (style.minLength != null &&
-                                  style.maxLength != null)))
-                      ? doubleInRange(
-                          style.minLength ??
-                              ((style.maxLength ?? constraints.maxWidth) / 3),
+                          (style.randomLength == null && (style.minLength != null && style.maxLength != null)))
+                      ? doubleInRange(style.minLength ?? ((style.maxLength ?? constraints.maxWidth) / 3),
                           style.maxLength ?? constraints.maxWidth)
                       : style.width,
                   height: style.height,
                   decoration: BoxDecoration(
-                    color: Theme.of(context).backgroundColor,
+                    color: Theme.of(context).scaffoldBackgroundColor,
                     borderRadius: style.borderRadius,
                   ),
                 );
@@ -170,6 +161,7 @@ class SkeletonListTile extends StatelessWidget {
     this.verticalSpacing = 8,
     this.trailing,
   }) : super(key: key);
+
   // : assert(height >= lineHeight + spacing + (padding?.vertical ?? 16) + 2);
 
   @override
@@ -251,5 +243,4 @@ class SkeletonListView extends StatelessWidget {
   }
 }
 
-double doubleInRange(num start, num end) =>
-    Random().nextDouble() * (end - start) + start;
+double doubleInRange(num start, num end) => Random().nextDouble() * (end - start) + start;

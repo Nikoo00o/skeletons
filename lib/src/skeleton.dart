@@ -59,6 +59,7 @@ class _SkeletonWidget extends StatefulWidget {
 
   final bool isLoading;
   final Widget skeleton;
+
   // final Widget child;
 
   @override

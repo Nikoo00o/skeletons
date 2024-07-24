@@ -13,8 +13,7 @@ class SkeletonTheme extends InheritedWidget {
     this.themeMode,
   }) : super(key: key, child: child);
 
-  static SkeletonTheme? of(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<SkeletonTheme>();
+  static SkeletonTheme? of(BuildContext context) => context.dependOnInheritedWidgetOfExactType<SkeletonTheme>();
 
   @override
   bool updateShouldNotify(SkeletonTheme oldWidget) =>
